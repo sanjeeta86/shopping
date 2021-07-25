@@ -1,0 +1,102 @@
+[
+    {
+      "name": "Series 1",
+      "value": [
+        {
+          "name": "Monday",
+          "value": 120
+        },
+        {
+          "name": "Tuesday",
+          "value": 132
+        },
+        {
+          "name": "Wednesday",
+          "value": 101
+        },
+        {
+          "name": "Thrusday",
+          "value": 135
+        },
+        {
+          "name": "Friday",
+          "value": 90
+        },
+        {
+          "name": "Saturday",
+          "value": 230
+        },
+        {
+          "name": "Sunday",
+          "value": 310
+        }
+      ]
+    },
+    {
+      "name": "Series 2",
+      "value": [
+        {
+          "name": "Monday",
+          "value": 220
+        },
+        {
+          "name": "Tuesday",
+          "value": 182
+        },
+        {
+          "name": "Wednesday",
+          "value": 191
+        },
+        {
+          "name": "Thrusday",
+          "value": 234
+        },
+        {
+          "name": "Friday",
+          "value": 290
+        },
+        {
+          "name": "Saturday",
+          "value": 330
+        },
+        {
+          "name": "Sunday",
+          "value": 310
+        }
+      ]
+    },
+    {
+      "name": "Series 3",
+      "value": [
+        {
+          "name": "Monday",
+          "value": 150
+        },
+        {
+          "name": "Tuesday",
+          "value": 232
+        },
+        {
+          "name": "Wednesday",
+          "value": 201
+        },
+        {
+          "name": "Thrusday",
+          "value": 154
+        },
+        {
+          "name": "Friday",
+          "value": 190
+        },
+        {
+          "name": "Saturday",
+          "value": 330
+        },
+        {
+          "name": "Sunday",
+          "value": 410
+        }
+      ]
+    }
+  ]
+  

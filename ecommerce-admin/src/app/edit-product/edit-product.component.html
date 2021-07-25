@@ -1,0 +1,243 @@
+
+<ngx-spinner 
+bdColor="rgba(19,1,1,0.94)" size="medium" color="#fff" type="line-spin-fade" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
+
+<!-- Content Header (Page header) -->
+<section class="content-header" style=" height: 68px;">
+  <h1>
+  Edit product
+    <small></small>
+  </h1>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/admin/dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+    <li class="breadcrumb-item active">Edit Product</li>
+  </ol>
+
+</section>
+
+
+
+
+<section class="content">
+
+  <div class="row">
+
+    <div class="col-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h4 class="box-title">Edit-Product</h4>
+        </div>
+        <div class="box-body">
+          <form (ngSubmit)="onSubmit()">
+
+
+            <!-- Color Picker -->
+            <div class="form-group">
+              <label>ProductName:</label>
+
+              <input type="text" class="form-control" name="Title" id="name" [(ngModel)]="product.Title" />
+
+            </div>
+            <!-- /.form group -->
+            <div class="form-row">
+              <!-- Color Picker -->
+              <div class="form-group col-md-6">
+                <label>Status:</label>
+
+                <input type="text" class="form-control" name="Status" id="price"
+                [(ngModel)]="product.Status">
+               
+
+              </div>
+            
+
+
+
+            </div>
+
+
+
+
+
+           
+            <div class="form-row">
+
+
+              <div class="form-group col-md-12">
+                <label for="inputAddress">Product Image:</label>
+                <input type="file" class="form-control" (change)="SelectImage($event)" name="Media" id="image"
+                   />
+      
+                <!-- <div *ngIf="submitted && f.image.errors" class="invalid-feedback">
+                  <div *ngIf="f.image.errors.required">Image is required</div>
+      
+                </div> -->
+              </div>
+
+           
+      
+            </div>
+
+
+
+
+
+            <button type="submit" class="btn btn-primary text-right">Edit Product</button>
+          </form>
+
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+
+
+
+  </div>
+  <!-- /.row -->
+
+</section>
+
+
+
+
+
+
+
+<!-- 
+<section class="content">
+
+
+  <div class="container">
+
+    <form (ngSubmit)="onSubmit()"> -->
+      <!-- <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Product Name:</label>
+
+          <input type="text" class="form-control" name="name" id="name" [(ngModel)]="product.name" /> -->
+
+          <!-- <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+              <div *ngIf="f.name.errors.required">Product is required</div>
+             
+          </div> -->
+        <!-- </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Product Price:</label>
+          <input type="text" class="form-control" name="price" id="price" placeholder="Please Enter Product Price"
+            [(ngModel)]="product.price" /> -->
+
+          <!-- <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+              <div *ngIf="f.price.errors.required">Price is required</div>
+             
+          </div> -->
+        <!-- </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Discount:</label>
+          <input type="text" class="form-control" name="discount" id="discount" [(ngModel)]="product.discount" /> -->
+
+          <!-- <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+              <div *ngIf="f.name.errors.required">Product is required</div>
+             
+          </div> -->
+        <!-- </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Shipping:</label>
+          <input type="text" class="form-control" name="shipping" id="shipping" [(ngModel)]="product.shipping" /> -->
+
+          <!-- <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+          <div *ngIf="f.name.errors.required">Product is required</div>
+         
+      </div> -->
+        <!-- </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Sold:</label>
+          <input type="text" class="form-control" name="sold" id="sold" [(ngModel)]="product.sold" /> -->
+
+          <!-- <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+              <div *ngIf="f.name.errors.required">Product is required</div>
+             
+          </div> -->
+        <!-- </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Product Quantity:</label>
+          <input type="text" class="form-control" name="quantity" id="quantity" [(ngModel)]="product.quantity" /> -->
+
+          <!-- <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+              <div *ngIf="f.quantity.errors.required">Quantity is required</div>
+             
+          </div> -->
+        <!-- </div>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress">Description:</label>
+        <input type="text" class="form-control" id="description" name="description" [(ngModel)]="product.description">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Long Description:</label>
+        <input type="text" class="form-control" name="long_description" id="long_description"
+          [(ngModel)]="product.long_description">
+      </div>
+      <div class="form-row">
+
+        <div class="form-group col-md-6">
+          <label for="inputState">Category</label>
+          <select id="inputState" class="form-control" name="category" style="height: 35px;"> -->
+            <!-- <option value="">Choose Category...</option> -->
+
+            <!-- <option [value]="category._id">{{category.category_name}}</option> -->
+            <!-- <option [value]="cat._id" *ngFor="let cat of categoryDetail">{{cat.category_name}}</option> -->
+          <!-- </select> -->
+          <!-- <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+          <div *ngIf="f.category.errors.required">Category is required</div>
+         
+      </div> -->
+        <!-- </div>
+        <div class="form-group col-md-6">
+          <label for="inputState">Brand</label>
+          <select id="inputState" class="form-control" name="brand" style="height: 35px;">
+            <option [value]="brand._id">{{brand.brand_name}}</option> -->
+            <!-- <option [value]="bd._id" *ngFor="let bd of brandDetail">{{bd.brand_name}}</option> -->
+          <!-- </select> -->
+          <!-- <div *ngIf="submitted && f.brand.errors" class="invalid-feedback">
+          <div *ngIf="f.brand.errors.required">Brand is required</div>
+         
+      </div> -->
+        <!-- </div>
+      </div>
+
+
+      <div class="form-row">
+
+
+        <div class="form-group">
+          <label for="inputAddress">Product Image:</label>
+          <input type="file" class="form-control" (change)="SelectImage($event)" name="photo" id="photo" /> -->
+
+          <!-- <div *ngIf="submitted && f.photo.errors" class="invalid-feedback">
+          <div *ngIf="f.photo.errors.required">Image is required</div>
+         
+      </div> -->
+          <!-- <div> <img [src]="product.photo" style="height: 100px;width: 100px;" /></div>
+          <div></div>
+          <div></div><br>
+
+        </div>
+
+
+      </div>
+
+
+
+      <button type="submit" class="btn btn-primary">Edit Product</button>
+      <div></div>
+      <br>
+    </form>
+  </div>
+</section> -->

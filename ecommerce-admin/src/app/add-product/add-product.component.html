@@ -1,0 +1,142 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+      <img src="https://www.whitesunrise.com/wp-content/uploads/2014/08/AngularShieldLogo.png" alt="logo" style="width:40px;">
+    </a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+     <li class="nav-item">
+            <a class="nav-link" routerLink =""> Home</a>
+     </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink ="/productlist">View Product</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink ="/managestatus">Manage Status</a>
+      </li>
+     
+    </ul>
+  </nav>
+  
+  <div class="container-fluid">
+    <ngx-spinner bdColor="rgba(19,1,1,0.94)" size="medium" color="#fff" type="line-spin-fade" [fullScreen]="true">
+        <p style="color: white"> Loading... </p>
+      </ngx-spinner>
+      
+      <!-- Content Header (Page header) -->
+      <section class="content-header" style=" height: 68px;">
+        <h1>
+          Add Product
+          <small></small>
+        </h1>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/admin/dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+          <li class="breadcrumb-item active">Add Product</li>
+        </ol>
+      
+      </section>
+      
+      
+      
+      
+      <section class="content">
+      
+        <div class="row">
+      
+          <div class="col-12">
+            <div class="box">
+              <div class="box-header with-border">
+                <h4 class="box-title">Add-Product</h4>
+              </div>
+              <div class="box-body">
+                <form [formGroup]="addproductForm" (ngSubmit)="onSubmit()">
+      
+      
+                  <!-- Color Picker -->
+                  <div class="form-group">
+                    <label>ProductName:</label>
+      
+                    <input type="text" class="form-control" formControlName="Title" id="Title"
+                      [ngClass]="{ 'is-invalid': submitted && f.Title.errors }">
+                    <!-- /.input group -->
+                    <div *ngIf="submitted && f.Title.errors" class="invalid-feedback">
+                      <div *ngIf="f.Title.errors.required">Product Name is required</div>
+      
+                    </div>
+      
+                  </div>
+               
+      
+      
+                  <!-- /.form group -->
+                  <div class="form-row">
+                    <!-- Color Picker -->
+                    <div class="form-group col-md-12">
+                      <label>Status :</label>
+      
+                      <input type="text" class="form-control" formControlName="Status" id="Status"
+                        [ngClass]="{ 'is-invalid': submitted && f.Status.errors }">
+                      <!-- /.input group -->
+                      <div *ngIf="submitted && f.Status.errors" class="invalid-feedback">
+                        <div *ngIf="f.Status.errors.required">Status Price is required</div>
+      
+                      </div>
+      
+                    </div>
+                  
+      
+      
+      
+                  </div>
+      
+      
+      
+                
+      
+      
+      
+      
+      
+                  <div class="form-row">
+      
+      
+                    <div class="form-group col-md-6">
+                      <label for="inputAddress">Product Image:</label>
+                      <input type="file" class="form-control" (change)="SelectImage($event)" formControlName="Media" id="Media"
+                        [ngClass]="{ 'is-invalid': submitted && f.Media.errors }" />
+            
+                      <div *ngIf="submitted && f.Media.errors" class="invalid-feedback">
+                        <div *ngIf="f.Media.errors.required">Image is required</div>
+            
+                      </div>
+                    </div>
+      
+                  
+            
+                  </div>
+      
+      
+      
+      
+      
+      
+                  <button type="submit" class="btn btn-primary text-right">Add Product</button>
+                </form>
+      
+              </div>
+              <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+          </div>
+      
+      
+      
+        </div>
+        <!-- /.row -->
+      
+      </section>
+      
+  </div>
+  
