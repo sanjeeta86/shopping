@@ -5,6 +5,7 @@ import { ProductService } from '../product.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
+import {CdkDragDrop, moveItemInArray, transferArrayItem,CDK_DROP_LIST} from '@angular/cdk/drag-drop';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-manage-status',
@@ -39,6 +40,38 @@ export class ManageStatusComponent implements OnInit {
       this.productDetail = res;
 
     })
+  }
+  todo = [
+    'Get to work',
+    'Pick up groceries',
+    'Go home',
+    'Fall asleep'
+  ];
+
+  doing = [
+    's to work',
+    'a up groceries',
+    'N home',
+    'J asleep'
+  ];
+
+  done = [
+    'Get up',
+    'Brush teeth',
+    'Take a shower',
+    'Check e-mail',
+    'Walk dog'
+  ];
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
+    } else {
+      transferArrayItem(event.previousContainer.data,
+                        event.container.data,
+                        event.previousIndex,
+                        event.currentIndex);
+    }
   }
 
 }

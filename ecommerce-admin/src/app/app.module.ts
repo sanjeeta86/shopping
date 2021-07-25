@@ -6,6 +6,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 import { ToastrModule } from 'ngx-toastr';
 
@@ -57,6 +58,7 @@ import { ManageStatusComponent } from './manage-status/manage-status.component';
     NgxPaginationModule,
     HttpClientModule,
     FormsModule,
+    DragDropModule,
     NgxEchartsModule,
     ToastrModule.forRoot()
 
