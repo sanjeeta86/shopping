@@ -32,7 +32,7 @@ export class AddProductComponent implements OnInit {
       this.addproductForm = this.fb.group({
         Title: ['', [Validators.required]],
         Status: ['', [Validators.required]],
-       
+        Description:['',[Validators.required]],
         Media: ['', [Validators.required]],
        
       })
@@ -66,13 +66,14 @@ export class AddProductComponent implements OnInit {
 
     if (!this.addproductForm.get('Title').value ||
       !this.addproductForm.get('Status').value ||
-   
+      !this.addproductForm.get('Description').value ||
       !this.Media) {
       return;
     } else {
       this.productService.addProduct(
         this.addproductForm.get('Title').value,
         this.addproductForm.get('Status').value,
+        this.addproductForm.get('Description').value,
         this.Media,
         
       ).subscribe(res => {

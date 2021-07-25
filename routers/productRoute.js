@@ -40,6 +40,7 @@ router.post('/', upload.single('Media'), (req, res, next) => {
   let { Title,
     Status,
     Media,
+    Description,
     } = req.body
 
   //console.log(req.body.onedayDelivery)
@@ -53,7 +54,8 @@ router.post('/', upload.single('Media'), (req, res, next) => {
      
       let product = new Product({
         Title: Title,
-        Status: Status ,
+        Status: Status,
+        Description:Description,
         Media: images,
       })
 

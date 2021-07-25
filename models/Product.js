@@ -9,6 +9,9 @@ const productSchema = new Schema({
     Title: {
         type: String,
     },
+    Description :{
+        type:String
+    },
     Status: {
         type:String,
         enum: ['open', 'in progress', 'completed'] 

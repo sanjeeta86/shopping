@@ -27,15 +27,16 @@ export class ProductService {
   //add 
   addProduct(Title: string,
     Status: string,
-   
+    Description:string,
     Media: any,
    ): Observable<any> {
     let formData = new FormData();
 
     formData.append('Title', Title);
     formData.append('Status', Status);
-   
+    formData.append('Description', Description)
     formData.append('Media', Media)
+   
     
 
     return this.http.post(`${this.apiServer}`, formData)
